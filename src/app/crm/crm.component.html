@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Angular4CliExample</title>
+<!-- 
+  <base href="/crm">
+ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>
+			<h2>
+		    	<a routerLink='/home' >HOME</a>
+		    </h2>
+		</td>
+		<td>
+			<h2 style="color:blue">CRM - Angular Routing!</h2>
+		</td>
+	</tr>
+</table>
+	
+<ul>
+  <li>
+    <h2>
+    	<a [routerLink]="['/crm', {outlets: {'crmoutlet': ['customers']}}]">CUSTOMERS</a>
+    </h2>
+  </li>
+  <li>
+    <h2>
+	    <a [routerLink]="['/crm', {outlets: {'crmoutlet': ['detail']}}]">DETAILS</a>
+    </h2>
+  </li>
+</ul>
+	<router-outlet name='crmoutlet'></router-outlet>
+</body>
+</html>
+
+
+
